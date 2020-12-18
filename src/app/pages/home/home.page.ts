@@ -12,15 +12,15 @@ interface Componente {
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  
   componentes: Componente[] = [
     {
-      icon: 'american-football-outline',
+      icon: 'albums-outline',
       name: 'Action Sheet',
       redirectTo: '/action-sheet'
     },
     {
-      icon: 'logo-apple-appstore',
+      icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
     }
