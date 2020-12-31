@@ -23,6 +23,11 @@ export class HomePage implements OnInit {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon: 'radio-button-off-outline',
+      name: 'Button',
+      redirectTo: '/button'
     }
   ];
 
