@@ -23,6 +23,11 @@ export class HomePage implements OnInit {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon: 'calendar-outline',
+      name: 'DateTime',
+      redirectTo: '/date-time'
     }
   ];
 
