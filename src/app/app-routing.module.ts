@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'action-sheet',
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   }
+
   
 ];
 
