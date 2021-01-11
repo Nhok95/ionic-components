@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Observable } from 'rxjs';
+import { Componente } from '../../interfaces/interfaces'
+import { DataService } from '../../services/data.service';
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
 
 @Component({
   selector: 'app-home',
@@ -14,22 +12,15 @@ interface Componente {
 })
 export class HomePage implements OnInit {
   
-  componentes: Componente[] = [
-    {
-      icon: 'albums-outline',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'alert-circle-outline',
-      name: 'Alert',
-      redirectTo: '/alert'
-    }
-  ];
+  componentes: Observable<Componente[]>;
 
-  constructor( private menuCtrl: MenuController  ) { }
+  constructor( private dataService: DataService,
+               private menuCtrl: MenuController  ) { }
+
 
   ngOnInit() {
+    console.log(this.dataService.getMenuOpts());
+    this.componentes = this.dataService.getMenuOpts();  
   }
 
   mostrarMenu() {
