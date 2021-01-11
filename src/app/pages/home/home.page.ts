@@ -19,7 +19,6 @@ export class HomePage implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.dataService.getMenuOpts());
     this.componentes = this.dataService.getMenuOpts();  
   }
 
