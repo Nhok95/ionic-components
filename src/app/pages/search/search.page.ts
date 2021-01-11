@@ -13,7 +13,7 @@ export class SearchPage implements OnInit {
   constructor( private dataService: DataService ) { }
 
   ngOnInit() {
-    this.dataService.getAlbumes().suscribe( albumes => {
+    this.dataService.getAlbumes().subscribe( albumes => {
       console.log(albumes)
       this.albumes = albumes;
     })
