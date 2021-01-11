@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ nombre }} - {{pais}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button (click)="exitWithoutParameters()" expand="block">
+    Exit Without Parameters
+  </ion-button>
+
+  <ion-button (click)="exitWithParameters()" expand="block">
+    Exit With Parameters
+  </ion-button>
+
+</ion-content>
