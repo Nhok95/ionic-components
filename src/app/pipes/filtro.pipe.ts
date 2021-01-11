@@ -22,9 +22,7 @@ export class FiltroPipe implements PipeTransform {
 
     return array.filter(
       item => item[columna].toLowerCase().includes( texto )
-    )
-
-    return null;
+    );
   }
 
 }
