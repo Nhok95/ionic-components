@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { Componente } from '../../interfaces/interfaces'
 import { DataService } from '../../services/data.service';
@@ -13,11 +14,16 @@ export class HomePage implements OnInit {
   
   componentes: Observable<Componente[]>;
 
-  constructor( private dataService: DataService ) { }
+  constructor( private dataService: DataService,
+               private menuCtrl: MenuController  ) { }
+
 
   ngOnInit() {
-    console.log(this.dataService.getMenuOpts());
     this.componentes = this.dataService.getMenuOpts();  
+  }
+
+  mostrarMenu() {
+    this.menuCtrl.open('first');
   }
 
 }
