@@ -5,8 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SegmentPageRoutingModule } from './segment-routing.module';
 import { ComponentsModule } from '../../components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 import { SegmentPage } from './segment.page';
+
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { SegmentPage } from './segment.page';
     FormsModule,
     IonicModule,
     SegmentPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   declarations: [SegmentPage]
 })
