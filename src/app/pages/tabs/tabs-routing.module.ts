@@ -15,15 +15,15 @@ const routes: Routes = [
     children: [
       {
         path: 'account',
-        //loadChildren: () => import('../avatar/avatar.module').then( m => m.AvatarPageModule )
+        loadChildren: () => import('../avatar/avatar.module').then( m => m.AvatarPageModule )
       },
       {
-        path: 'contact',
-        //loadChildren: () => import('../list/list.module').then( m => m.ListPageModule )
+        path: 'contacts',
+        loadChildren: () => import('../list/list.module').then( m => m.ListPageModule )
       },
       {
         path: 'settings',
-        //loadChildren: () => import('../infinite/infinite.module').then( m => m.InfinitePageModule )
+        loadChildren: () => import('../infinite/infinite.module').then( m => m.InfinitePageModule )
       }
     ]
   }
