@@ -17,7 +17,6 @@ export class HomePage implements OnInit {
   constructor( private dataService: DataService,
                private menuCtrl: MenuController  ) { }
 
-
   ngOnInit() {
     this.componentes = this.dataService.getMenuOpts();  
   }
